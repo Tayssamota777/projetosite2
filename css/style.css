@@ -1,0 +1,191 @@
+/*
+1- Zerar margin e padding para os elementos:
+body, h1, h2, ul, li, p, dd, dt, dl
+*/
+
+body,
+h1,
+h2,
+p,
+li,
+ul,
+dd,
+dt,
+dl {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+/*
+2-Ajustar as imagens para ocupar a larguma máxima:
+Usar o display block e max-width */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    color: rgb(198, 200, 202);
+    display: grid;
+    grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+
+    /* | 1fr |  | 120px| | minmax(300px,800px) || 1fr | */
+}
+
+/*
+3- Remover os estilos das ul
+*/
+ul {
+    list-style: none;
+}
+
+.cabecalho {
+    grid-column: 3/5;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: brown;
+
+}
+
+.cabecalho ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.cabecalho li a {
+    display: block;
+    padding: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: aliceblue;
+    text-decoration: none;
+    /*tirar marca do link*/
+    font-weight: bold;
+    /*negrito*/
+    letter-spacing: 0.125rem;
+    /*espaço das letras*/
+    font-size: 2rem;
+    /*tamanho da fonte, 1rem= 16px*/
+    text-transform: uppercase;
+    /*fonte em letra Maiuscula*/
+}
+
+.grid-section {
+    grid-column: 2/4;
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 90px 300px 1fr;
+    grid-gap: 15px;
+    margin-bottom: 2rem;
+
+}
+
+.titulo {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2rem;
+    grid-column: 1/4;
+    margin-bottom: 1rem;
+}
+
+.fotos {
+    height: 300px;
+    overflow-y: scroll;
+    grid-column: 2;
+    width: 300px;
+
+}
+
+.descricao {
+    grid-column: 3;
+}
+
+
+.descricao section {
+    margin-bottom: 2rem;
+}
+
+.descricao h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    color: blueviolet;
+}
+
+.descricao p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.faq-lista {
+    grid-column: 3;
+}
+
+.faq-lista dt {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    color: blueviolet;
+}
+
+.faq-lista dd {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+#mapa {
+    grid-column: 2;
+}
+
+#contato {
+    grid-column: 3;
+}
+
+#contato li {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+#direitos {
+    grid-column: 1/5;
+    margin-bottom: 2rem;
+}
+
+#direitos p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 0.8;
+    text-align: center;
+    background-color: blueviolet;
+}
+
+.js-tabcontent section {
+    display: none;
+  }
+ 
+.js-tabcontent section.ativo {
+    display: block !important;
+    animation: show .5s forwards;
+  }
+ 
+  @keyframes show {
+    from {
+      opacity: 0;
+      transform: translate3d(-30px, 0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
